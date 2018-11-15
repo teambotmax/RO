@@ -12,7 +12,7 @@ from urllib.parse import urlencode
 import subprocess as cmd
 
 aditmadzs = LineClient()
-#aditmadzs = LineClient(authToken='ISI TOKEN MU CINTA')
+#aditmadzs = LineClient(authToken=' TOKEN MU CINTA')
 aditmadzs.log("Auth Token : " + str(aditmadzs.authToken))
 channel = LineChannel(aditmadzs)
 aditmadzs.log("Channel Access Token : " + str(channel.channelAccessToken))
