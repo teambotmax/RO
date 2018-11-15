@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*- 
+# -*- coding: utf-8 -*-
 import LINEPY
 from LINEPY import *
 from akad.ttypes import *
@@ -8,10 +8,8 @@ import pytz, datetime, pafy, time, timeit, random, sys, ast, re, os, json, subpr
 from datetime import timedelta, date
 from datetime import datetime
 from bs4 import BeautifulSoup
-from googletrans import Translator
-import youtube_dl
-
-botStart = time.time()
+from urllib.parse import urlencode
+import subprocess as cmd
 
 boy = LineClient()
 #boy = LineClient(token["boy"])
@@ -85,10 +83,10 @@ poll = LinePoll(k8)
 poll = LinePoll(k9)
 poll = LinePoll(k10)
 call = boy
-creator = ["uafd65893655c791f07c9ff31cbbc28d1"]
-owner = ["uafd65893655c791f07c9ff31cbbc28d1"]
-admin = ["uafd65893655c791f07c9ff31cbbc28d1"]
-staff = ["uafd65893655c791f07c9ff31cbbc28d1"]
+creator = [""]
+owner = [""]
+admin = [""]
+staff = [""]
 mid = boy.getProfile().mid
 Amid = k1.getProfile().mid
 Bmid = k2.getProfile().mid
