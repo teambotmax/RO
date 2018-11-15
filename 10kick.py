@@ -11,17 +11,8 @@ from bs4 import BeautifulSoup
 from googletrans import Translator
 import youtube_dl
 
-#TARUH TOKENNYA DI ( boyfira.json. )
-# BISA JUGA PAKE LINK CUKUP  #  
-# CUKUP GANTI  MID ADMIN DAN JANGAN MASUKIN TOKENX DISINI 
-# TAPI DI boyfira.json FAHAM GAK FAHAM TERLALU
-# CREATOR BY SELFBOT-BY:MAX 
-
 botStart = time.time()
-mulai = time.time()
-tokenOpen = codecs.open("boyfira.json","r","utf-8")
-token = json.load(tokenOpen)
-   
+
 boy = LineClient()
 #boy = LineClient(token["boy"])
 channel = LineChannel(boy,boy.server.CHANNEL_ID['LINE_TIMELINE'])
@@ -266,12 +257,6 @@ def restartBot():
     python = sys.executable
     os.execl(python, python, *sys.argv)
 
-def autoRestart():
-    if time.time() - botStart > int(settings["timeRestart"]):
-        backupData()
-        time.sleep(5)
-        restartBot()
-
 def waktu(secs):
     mins, secs = divmod(secs,60)
     hours, mins = divmod(mins,60)
@@ -304,7 +289,7 @@ def mentionMembers(to, mid):
                 num=(num+1)
             else:
                 try:
-                    no = "\n┗━━[ {} ]".format(str(boy.getGroup(to).name))
+                    no = "\n┗━━[ {} ]".format(str(aditmadzs.getGroup(to).name))
                 except:
                     no = "\n┗━━[ Success ]"
         boy.sendMessage(to, textx, {'MENTION': str('{"MENTIONEES":' + json.dumps(arr) + '}')}, 0)
@@ -331,7 +316,7 @@ def siderMembers(to, mid):
                 num=(num+1)
             else:
                 try:
-                    no = "\n┗━━[ {} ]".format(str(boy.getGroup(to).name))
+                    no = "\n┗━━[ {} ]".format(str(aditmadzs.getGroup(to).name))
                 except:
                     no = "\n┗━━[ Success ]"
         boy.sendMessage(to, textx, {'MENTION': str('{"MENTIONEES":' + json.dumps(arr) + '}')}, 0)
@@ -359,7 +344,7 @@ def welcomeMembers(to, mid):
                 num=(num+1)
             else:
                 try:
-                    no = "\n┗━━[ {} ]".format(str(boy.getGroup(to).name))
+                    no = "\n┗━━[ {} ]".format(str(aditmadzs.getGroup(to).name))
                 except:
                     no = "\n┗━━[ Success ]"
         boy.sendMessage(to, textx, {'MENTION': str('{"MENTIONEES":' + json.dumps(arr) + '}')}, 0)
@@ -387,7 +372,7 @@ def leaveMembers(to, mid):
                 num=(num+1)
             else:
                 try:
-                    no = "\n┗━━[ {} ]".format(str(boy.getGroup(to).name))
+                    no = "\n┗━━[ {} ]".format(str(aditmadzs.getGroup(to).name))
                 except:
                     no = "\n┗━━[ Success ]"
         boy.sendMessage(to, textx, {'MENTION': str('{"MENTIONEES":' + json.dumps(arr) + '}')}, 0)
@@ -415,7 +400,7 @@ def sendMention(to, mid, firstmessage):
         timeNow = datetime.now(tz=tz)
         eltime = time.time() - mulai
         bot = runtime(eltime)
-        text += mention+"◐ Jam : "+datetime.strftime(timeNow,'%H:%M:%S')+" Wib\n🤖 Group : "+str(len(gid))+"\n🤖 Teman : "+str(len(teman))+"\n🤖 Expired : In "+hari+"\n🤖 Version: SELFBOT-BY:MAX\n🤖 Tanggal : "+datetime.strftime(timeNow,'%Y-%m-%d')+"\n🤖 Runtime : \n • "+bot
+        text += mention+"◐ Jam : "+datetime.strftime(timeNow,'%H:%M:%S')+" Wib\n🐚 Group : "+str(len(gid))+"\n🐚 Teman : "+str(len(teman))+"\n🐚 Tanggal : "+datetime.strftime(timeNow,'%Y-%m-%d')+"\n🐚 Runtime : \n • "+bot
         boy.sendMessage(to, text, {'MENTION': str('{"MENTIONEES":' + json.dumps(arr) + '}')}, 0)
     except Exception as error:
         boy.sendMessage(to, "[ INFO ] Error :\n" + str(error))
