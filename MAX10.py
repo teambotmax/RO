@@ -10,67 +10,66 @@ from datetime import datetime
 from bs4 import BeautifulSoup
 from urllib.parse import urlencode
 import subprocess as cmd
-
+#==============================================================================#
 boy = LineClient()
 #boy = LineClient(token["boy"])
 channel = LineChannel(boy,boy.server.CHANNEL_ID['LINE_TIMELINE'])
 boy.log("Auth Token : " + str(boy.authToken))
-
+#==============================================================================#
 k1 = LineClient()
 #K1 = LineClient(token["k1"])
 channel1 = LineChannel(k1,k1.server.CHANNEL_ID['LINE_TIMELINE'])
 k1.log("Auth Token : " + str(k1.authToken))
-
+#==============================================================================#
 k2 = LineClient()
 #K2 = LineClient(token["k2"])
 channel2 = LineChannel(k2,k2.server.CHANNEL_ID['LINE_TIMELINE'])
 k2.log("Auth Token : " + str(k2.authToken))
-
+#==============================================================================#
 k3 = LineClient()
 #K3 = LineClient(token["k3"])
 channel3 = LineChannel(k3,k3.server.CHANNEL_ID['LINE_TIMELINE'])
 k3.log("Auth Token : " + str(k3.authToken))
-
+#==============================================================================#
 k4 = LineClient()
 #K4 = LineClient(token["k4"])
 channel4 = LineChannel(k4,k4.server.CHANNEL_ID['LINE_TIMELINE'])
 k4.log("Auth Token : " + str(k4.authToken))
-
+#==============================================================================#
 k5 = LineClient()
 #K5 = LineClient(token["k5"])
 channel5 = LineChannel(k5,k5.server.CHANNEL_ID['LINE_TIMELINE'])
 k5.log("Auth Token : " + str(k5.authToken))
-
+#==============================================================================#
 k6 = LineClient()
 #K6 = LineClient(token["k6"])
 channel6 = LineChannel(k6,k6.server.CHANNEL_ID['LINE_TIMELINE'])
 k6.log("Auth Token : " + str(k6.authToken))
-
+#==============================================================================#
 k7 = LineClient()
 #K7 = LineClient(token["k7"])
 channel7 = LineChannel(k7,k7.server.CHANNEL_ID['LINE_TIMELINE'])
 k7.log("Auth Token : " + str(k7.authToken))
-
+#==============================================================================#
 k8 = LineClient()
 #K8 = LineClient(token["k8"])
 channel8 = LineChannel(k8,k8.server.CHANNEL_ID['LINE_TIMELINE'])
 k8.log("Auth Token : " + str(k8.authToken))
-
+#==============================================================================#
 k9 = LineClient()
 #K9 = LineClient(token["k9"])
 channel9 = LineChannel(k9,k9.server.CHANNEL_ID['LINE_TIMELINE'])
 k9.log("Auth Token : " + str(k9.authToken))
-
+#==============================================================================#
 k10 = LineClient()
 #K10 = LineClient(token["k10"])
 channel10 = LineChannel(k10,k10.server.CHANNEL_ID['LINE_TIMELINE'])
 k10.log("Auth Token : " + str(k10.authToken))
-
+#==============================================================================#
 sw = LineClient()
 #sw = LineClient(token["sw"])
 sw.log("Auth Token : " + str(sw.authToken))
-
-#ubah mid di dalem admin,owner,creator.json dengan mid kalian
+#==============================================================================#
 poll = LinePoll(boy)
 poll = LinePoll(k1)
 poll = LinePoll(k2)
