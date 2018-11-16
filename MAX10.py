@@ -444,6 +444,7 @@ def help():
                   "╠❂͜͡☬➣ " + key + "Tagall\n" + \
                   "╠❂͜͡☬➣ " + key + "Mjoin\n" + \
                   "╠❂͜͡☬➣ " + key + "Mbye\n" + \
+                  "╠❂͜͡☬➣ " + key + "Pulang\n" + \
                   "╠❂͜͡☬➣ " + key + "Assist join\n" + \
                   "╠❂͜͡☬➣ " + key + "Ginfo\n" + \
                   "╠❂͜͡☬➣ " + key + "Open\n" + \
@@ -503,6 +504,7 @@ def help2():
     helpMessage2 = "╔══════════════════╗" + "\n" + \
                   "╠          🤖 Protect 🤖" + "\n" + \
                   "╠══════════════════╝" + "\n" + \
+                  "╠❂͜͡☬➣ " + key + "Pro「on/off」\n" + \
                   "╠❂͜͡☬➣ " + key + "Notag「on/off」\n" + \
                   "╠❂͜͡☬➣ " + key + "Allpro「on/off」\n" + \
                   "╠❂͜͡☬➣ " + key + "Protecturl「on/off」\n" + \
@@ -3615,7 +3617,7 @@ def bot(op):
                                 eltime = time.time() - mulai
                                 bot = runtime(eltime)
                                 start = time.time()
-                                sw.sendText("u054c3692f90083a5b1ad23e4a663f676", '.')
+                                sw.sendText("u83211e3b69096f869d545aed2d1724d3", '.')
                                 elapsed_time = time.time() - start
                                 ryan = boy.getContact(mid)
                                 zx = ""
@@ -4401,7 +4403,7 @@ def bot(op):
                                 for i in gid:
                                     h = boy.getGroup(i).name
                                     if h == ng:
-                                        k1.sendMessage(i, "Silahkan admin invite atau masukan kembali")
+                                        k1.sendMessage(i, "@! Silahkan admin invite atau masukan kembali")
                                         k1.leaveGroup(i)
                                         k2.leaveGroup(i)
                                         k3.leaveGroup(i)
@@ -4436,16 +4438,51 @@ def bot(op):
                         elif cmd == "sprespon":
                           if wait["selfbot"] == True:
                             if msg._from in admin:
+                                boy.sendMessage(msg.to, "Progres speed...")
                                 get_profile_time_start = time.time()
                                 get_profile = boy.getProfile()
                                 get_profile_time = time.time() - get_profile_time_start
-                                get_group_time_start = time.time()
-                                get_group = boy.getGroupIdsJoined()
-                                get_group_time = time.time() - get_group_time_start
-                                get_contact_time_start = time.time()
-                                get_contact = boy.getContact(mid)
-                                get_contact_time = time.time() - get_contact_time_start
-                                boy.sendMessage(msg.to, "🤖 BOT Speed respon\n\n - Get Profile\n   %.10f\n - Get Contact\n   %.10f\n - Get Group\n   %.10f" % (get_profile_time/3,get_contact_time/3,get_group_time/3))
+                                boy.sendMessage(msg.to, "%.10f" % (get_profile_time))
+                                get_profile_time_start = time.time()
+                                get_profile = boy.getProfile()
+                                get_profile_time = time.time() - get_profile_time_start
+                                k1.sendMessage(msg.to, "%.10f" % (get_profile_time))
+                                get_profile_time_start = time.time()
+                                get_profile = boy.getProfile()
+                                get_profile_time = time.time() - get_profile_time_start
+                                k2.sendMessage(msg.to, "%.10f" % (get_profile_time))
+                                get_profile_time_start = time.time()
+                                get_profile = boy.getProfile()
+                                get_profile_time = time.time() - get_profile_time_start
+                                k3.sendMessage(msg.to, "%.10f" % (get_profile_time))
+                                get_profile_time_start = time.time()
+                                get_profile = boy.getProfile()
+                                get_profile_time = time.time() - get_profile_time_start
+                                k4.sendMessage(msg.to, "%.10f" % (get_profile_time))
+                                get_profile_time_start = time.time()
+                                get_profile = boy.getProfile()
+                                get_profile_time = time.time() - get_profile_time_start
+                                k5.sendMessage(msg.to, "%.10f" % (get_profile_time))
+                                get_profile_time_start = time.time()
+                                get_profile = boy.getProfile()
+                                get_profile_time = time.time() - get_profile_time_start
+                                k6.sendMessage(msg.to, "%.10f" % (get_profile_time))
+                                get_profile_time_start = time.time()
+                                get_profile = boy.getProfile()
+                                get_profile_time = time.time() - get_profile_time_start
+                                k7.sendMessage(msg.to, "%.10f" % (get_profile_time))
+                                get_profile_time_start = time.time()
+                                get_profile = boy.getProfile()
+                                get_profile_time = time.time() - get_profile_time_start
+                                k8.sendMessage(msg.to, "%.10f" % (get_profile_time))
+                                get_profile_time_start = time.time()
+                                get_profile = boy.getProfile()
+                                get_profile_time = time.time() - get_profile_time_start
+                                k9.sendMessage(msg.to, "%.10f" % (get_profile_time))
+                                get_profile_time_start = time.time()
+                                get_profile = boy.getProfile()
+                                get_profile_time = time.time() - get_profile_time_start
+                                k10.sendMessage(msg.to, "%.10f" % (get_profile_time))
 
                         elif cmd == "speed" or cmd == "sp":
                           if wait["selfbot"] == True:
@@ -5405,7 +5442,7 @@ def bot(op):
                                        except:
                                            pass
                         
-                        elif cmd == "Masmax":
+                        elif cmd == "Max kill":
                           if wait["selfbot"] == True:
                             if msg._from in admin:
                                 if msg.toType == 2:
@@ -5564,6 +5601,48 @@ def bot(op):
                                 wait["Talkwblacklist"] = False
                                 wait["Talkdblacklist"] = False
                                 boy.sendMessage(msg.to,"Berhasil di Refresh...")
+
+                        elif cmd == "pro on" or text.lower() == 'pro on':
+                            if msg._from in admin:
+                                wait["protectqr"] = True
+                                k1.sendMessage(msg.to,"KICKER 1 ON")
+                                wait["protectkick"] = True
+                                k2.sendMessage(msg.to,"KICKER 2 ON")
+                                wait["protectjoin"] = True
+                                k3.sendMessage(msg.to,"KICKER 3 ON")
+                                wait["protectcancel"] = True
+                                k4.sendMessage(msg.to,"KICKER 4 ON")
+                                wait["protectinvite"] = True
+                                k5.sendMessage(msg.to,"KICKER 5 ON")
+                                wait["protectantijs"] = True
+                                k6.sendMessage(msg.to,"KICKER 6 ON")
+                                wait["ghost"] = True
+                                k7.sendMessage(msg.to,"KICKER 7 ON")
+                                wait["welcome"] = True
+                                k8.sendMessage(msg.to,"KICKER 8 ON")
+                                k9.sendMessage(msg.to,"KICKER 9 ON")
+                                k10.sendMessage(msg.to,"KICKER 10 ON")
+
+                        elif cmd == "pro off" or text.lower() == 'pro off':
+                            if msg._from in admin:
+                                wait["protectqr"] = False
+                                k1.sendMessage(msg.to,"KICKER 1 OFF")
+                                wait["protectkick"] = False
+                                k2.sendMessage(msg.to,"KICKER 2 OFF")
+                                wait["protectjoin"] = False
+                                k3.sendMessage(msg.to,"KICKER 3 OFF")
+                                wait["protectcancel"] = False
+                                k4.sendMessage(msg.to,"KICKER 4 OFF")
+                                wait["protectinvite"] = False
+                                k5.sendMessage(msg.to,"KICKER 5 OFF")
+                                wait["protectantijs"] = False
+                                k6.sendMessage(msg.to,"KICKER 6 OFF")
+                                wait["ghost"] = False
+                                k7.sendMessage(msg.to,"KICKER 7 OFF")
+                                wait["welcome"] = False
+                                k8.sendMessage(msg.to,"KICKER 8 OFF")
+                                k9.sendMessage(msg.to,"KICKER 9 OFF")
+                                k10.sendMessage(msg.to,"KICKER 10 OFF")
 
                         elif cmd == "contact admin" or text.lower() == 'contact admin':
                                 ma = ""
@@ -5939,7 +6018,7 @@ def bot(op):
                                  for ticket_id in n_links:
                                      group = boy.findGroupByTicket(ticket_id)
                                      boy.acceptGroupInvitationByTicket(group.id,ticket_id)
-                                     boy.sendMessage(msg.to, "🤖 SELFBOT-BY:MAX 🤖 : %s" % str(group.name))
+                                     boy.sendMessage(msg.to, "😈 JOIN GROUP 😈 : %s" % str(group.name))
                                      group1 = k1.findGroupByTicket(ticket_id)
                                      k1.acceptGroupInvitationByTicket(group1.id,ticket_id)
                                      k1.sendMessage(msg.to, "🤖 SELFBOT-BY:MAX 🤖 1 : %s" % str(group.name))
