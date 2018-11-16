@@ -1,3 +1,4 @@
+# แก้โดย SELFBOT-BY:MAX ติดต่อได้ที่เบอร์ 191
 # -*- coding: utf-8 -*-
 import LINEPY
 from LINEPY import *
@@ -114,7 +115,7 @@ Zmid = sw.getProfile().mid
 KAC = [boy,k1,k2,k3,k4,k5,k6,k7,k8,k9,k10,sw]
 ABC = [boy,k1,k2,k3,k4,k5,k6,k7,k8,k9,k10,sw]
 Bots = [mid,Amid,Bmid,Cmid,Dmid,Emid,Fmid,Gmid,Hmid,Imid,Jmid,Zmid]
-Boy = admin + staff + creator
+Aditmadzs = admin + staff + creator
 
 protectqr = []
 protectkick = []
